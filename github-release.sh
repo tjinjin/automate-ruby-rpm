@@ -22,8 +22,8 @@ do
   github-release upload --user tjinjin \
     --repo automate-ruby-rpm \
     --tag $VERSION \
-    --name "$file" \
-    --file $file
+    --name "$i" \
+    --file $i
 done
 
 # edit description
