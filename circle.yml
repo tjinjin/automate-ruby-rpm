@@ -7,7 +7,7 @@ test:
   post:
     - docker build -t sugi/ruby-rpm .
     - docker run -v $CIRCLE_ARTIFACTS:/shared:rw sugi/ruby-rpm /bin/sh ./rubybuild.sh
-deployment
+deployment:
   branch: automate_release
   commands:
     - go get github.com/aktau/github-release
