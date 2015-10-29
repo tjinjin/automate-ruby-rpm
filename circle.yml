@@ -5,10 +5,10 @@ machine:
     - docker
 test:
   post:
-    #    - docker build -t sugi/ruby-rpm .
-    #    - docker run -v $CIRCLE_ARTIFACTS:/shared:rw sugi/ruby-rpm /bin/sh ./rubybuild.sh
-    - go get github.com/aktau/github-release
-    - github-release
-general:
-  artifacts:
-    - "*.rpm"
+    - docker build -t sugi/ruby-rpm .
+    - docker run -v $CIRCLE_ARTIFACTS:/shared:rw sugi/ruby-rpm /bin/sh ./rubybuild.sh
+#general:
+#  artifacts:
+#    - "*.rpm"
+#    - go get github.com/aktau/github-release
+#    - github-release.sh
