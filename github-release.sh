@@ -16,8 +16,8 @@ github-release release \
 
 # upload files
 for i in $(ls -1 *.rpm) do
-  echo "* $i" >> description.md
-  echo "  * $(openssh sha256 $i)" >> description.md
+  echo "\* $i" >> description.md
+  echo "  \* $(openssh sha256 $i)" >> description.md
   github-release upload --user tjinjin \
     --repo automate-ruby-rpm \
     --tag $VERSION \
