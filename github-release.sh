@@ -15,6 +15,8 @@ github-release release \
   --description "not release"
 
 # upload files
+echo "Use at your own risk!" >> description.md
+echo "" >> description.md
 for i in $(ls -1 *.rpm)
 do
   echo "* $i" >> description.md
