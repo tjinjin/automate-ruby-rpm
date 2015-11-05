@@ -16,3 +16,4 @@ RUN chown -R docker /var/tmp/rpmbuild
 WORKDIR /var/tmp/rpmbuild
 ADD rubybuild.sh /var/tmp/rpmbuild/rubybuild.sh
 ADD ruby22x.spec /var/tmp/rpmbuild/SPECS/ruby22x.spec
+ADD ruby-version /var/tmp/rpmbuild/ruby-version
