@@ -1,7 +1,13 @@
 #!/bin/env bash
 HOME=/var/tmp
+RUBY_VERSION=$(cat ruby-version)
 
-cd $HOME/rpmbuild/SOURCES && curl -LO http://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz
+if [ -z "$RUBY_VERSION" ]; then
+  echo "required ruby-version file."
+  exit 1
+fi
+
+cd $HOME/rpmbuild/SOURCES && curl -LO http://cache.ruby-lang.org/pub/ruby/$(echo $RUBY_VERSION | sed -e 's/\.[0-9]$//')/ruby-$RUBY_VERSION.tar.gz
 
 rpmbuild -ba $HOME/rpmbuild/SPECS/ruby22x.spec
 
