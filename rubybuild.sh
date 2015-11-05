@@ -12,3 +12,4 @@ cd $HOME/rpmbuild/SOURCES && curl -LO http://cache.ruby-lang.org/pub/ruby/$(echo
 rpmbuild -ba $HOME/rpmbuild/SPECS/ruby22x.spec
 
 cp $HOME/rpmbuild/RPMS/x86_64/* /shared/
+cp $HOME/rpmbuild/SRPMS/* /shared/
